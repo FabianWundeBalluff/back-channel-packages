@@ -11,3 +11,4 @@ sudo docker build -t ubuntu:18.04Balluff -f ./dockerfile ./
 ./cpack_mosquitto.sh
 ```
 
+Executing this script will create an Debian Package in the current directory
