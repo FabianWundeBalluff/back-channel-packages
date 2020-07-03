@@ -1,0 +1,12 @@
+FROM ubuntu:18.04
+
+RUN apt update -y 
+RUN apt install -y git
+RUN apt install -y build-essential
+RUN apt install -y cmake 
+RUN apt install -y ninja-build
+RUN apt install -y openssl 
+RUN useradd -m backchannel
+RUN mkdir -p /home/backchannel/git
+RUN git -C /home/backchannel/git clone https://github.com/Balluff/mosquitto.git -b feature/cpack
+
