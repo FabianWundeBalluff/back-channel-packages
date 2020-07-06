@@ -5,14 +5,15 @@ RUN apt install -y git
 RUN apt install -y build-essential
 RUN apt install -y cmake 
 RUN apt install -y ninja-build
-RUN apt install -y openssl && apt install -y  libssl-dev
+RUN apt install -y libargtable2-dev
+RUN apt install -y libjsoncpp-dev
+RUN apt install -y libpthread-stubs0-dev #&& apt install -y libboost-all-dev && apt install -y doxygen
 RUN useradd -m backchannel 
 RUN mkdir -p /home/backchannel/git
 RUN git -C /home/backchannel/git clone https://github.com/Balluff/mosquitto.git -b feature/cpack
 RUN git -C /home/backchannel/git  clone https://github.com/Balluff/libjson-rpc-cpp.git -b feature/cmake
-RUN git -C /home/backchannel/git clone https://github.com/curl/curl.git
 RUN mkdir -p /home/backchannel/build/curl
-RUN cd /home/backchannel/build/curl && cmake -G "Ninja"  -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=OFF /home/backchannel/git/curl
+
  
 
 
