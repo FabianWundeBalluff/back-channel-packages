@@ -4,6 +4,7 @@ RUN apt update -y
 RUN apt install -y git
 RUN apt install -y build-essential
 RUN apt install -y cmake 
+RUN apt install -y file
 RUN apt install -y ninja-build
 RUN apt install -y libargtable2-dev
 RUN apt install -y libjsoncpp-dev
