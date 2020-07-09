@@ -19,3 +19,20 @@ Executing this script will create an Debian Package in the current directory
 cd <check out dir>/ubuntu-18.04
 ./cpack_jsonrpc.sh
 ```
+
+## create parent image (OpenSuse 15.1)
+
+``` shell
+sudo docker pull balluff/itot-build-base:1.0.0-opensuse15.1
+cd <check out dir>/OpenSuse-15.1
+sudo docker build -t opensuse:15.1Balluff -f ./dockerfile ./
+
+```
+
+## create parent image (OpenSuse 15.1)
+
+```shell
+cd <check out dir>/OpenSuse-15.1
+./cpack_jsonrpc.sh
+```
+
