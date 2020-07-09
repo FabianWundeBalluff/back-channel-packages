@@ -3,7 +3,7 @@
 rm -rf $PWD/libjson-rpc-cpp
 mkdir -p $PWD/libjson-rpc-cpp/build
 mkdir -p $PWD/libjson-rpc-cpp/package
-docker run --rm -u $(id -u):$(id -g) -it \
+sudo docker run --rm -u $(id -u):$(id -g) -it \
     -v $PWD/libjson-rpc-cpp:$PWD/libjson-rpc-cpp \
     -w $PWD/libjson-rpc-cpp/build \
     ubuntu:18.04Balluff \
@@ -19,9 +19,10 @@ docker run --rm -u $(id -u):$(id -g) -it \
 	-DREDIS_SERVER=OFF \
 	-DHUNTER_ENABLED=OFF \
         -DCOMPILE_TESTS=OFF \
+	-DCOMPILE_STUBGEN=OFF \
         /home/backchannel/git/libjson-rpc-cpp;
 
-docker run --rm -u $(id -u):$(id -g) -it \
+sudo docker run --rm -u $(id -u):$(id -g) -it \
         -v $PWD/libjson-rpc-cpp:$PWD/libjson-rpc-cpp \
         -w $PWD/libjson-rpc-cpp/build \
         ubuntu:18.04Balluff \

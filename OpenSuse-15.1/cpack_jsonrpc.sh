@@ -22,6 +22,7 @@ sudo docker run --rm -u $(id -u):$(id -g) -it \
 	-DREDIS_SERVER=OFF \
 	-DHUNTER_ENABLED=OFF \
         -DCOMPILE_TESTS=OFF \
+	-DCOMPILE_STUBGEN=OFF \
         ../git/libjson-rpc-cpp;
 
 sudo docker run --rm -u $(id -u):$(id -g) -it \

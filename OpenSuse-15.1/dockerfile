@@ -1,7 +1,7 @@
 FROM balluff/itot-build-base:1.0.0-opensuse15.1 
 RUN zypper install -y libmosquitto1
 RUN zypper install -y jsoncpp-devel 
-RUN zypper install -y libargtable2-devel
+
  
 
 
